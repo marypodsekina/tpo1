@@ -43,12 +43,15 @@ class TreeTest {
     void binaryTreeStructure(){
         Tree<Integer> tree = new Tree<Integer>(15, null);
         tree.add(5, 13, 40, 9);
-
     }
 
     @Test
     void checkSearch(){
-
+        Tree<Integer> tree1 = new Tree<Integer>(15, null);
+        tree1.add(5, 13, 40, 9);
+        Tree<Integer> tree2 = new Tree<Integer>(13, null);
+        tree2.add(9);
+        assertEquals(tree1.search(13).print(),tree2.print());
     }
 
 }
